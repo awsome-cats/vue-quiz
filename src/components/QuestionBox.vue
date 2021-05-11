@@ -1,6 +1,5 @@
 <template>
 <!----bootstrap vueのV4components start---->
-
     <div class="question-box-container">
         <b-jumbotron >
             <!----bootstrap vueのsimple hero unit start---->
