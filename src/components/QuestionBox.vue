@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template>
 <!----bootstrap vueのV4components start---->
     <div class="question-box-container">
@@ -28,7 +29,7 @@
         </b-jumbotron>
     </div>
     <!----bootstrap vueのV4components end---->
-    
+
 </template>
 
 <script>
@@ -78,7 +79,7 @@ export default {
         },
         submitAnswer(){
             let isCorrect = false
-            
+
             if (this.selectedIndex === this.correctIndex){
                 isCorrect = true
             }
@@ -90,7 +91,7 @@ export default {
             //console.log(this.answers)
             this.shuffledAnswers = _.shuffle(answers)
             this.correctIndex = this.shuffledAnswers.indexOf(this.currentQuestion.correct_answer)
-            
+
         },
         answerClass(index){
             let answerClass = ''
@@ -99,8 +100,8 @@ export default {
                 answerClass = 'selected'
             }else if (this.answered && this.correnctIndex === index){
                 answerClass = 'correct'
-            } else if (this.answered && 
-            this.selectedIndex === index && 
+            } else if (this.answered &&
+            this.selectedIndex === index &&
             this.correctIndex !== index
             ) {
             answerClass = 'incorrect'
@@ -132,4 +133,3 @@ export default {
         background-color: red;
     }
 </style>
- 
